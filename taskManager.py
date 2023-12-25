@@ -5,7 +5,8 @@ from functions.readjson import readJson
 from functions.insertJson import insertJson
 from functions.deleteTask import deleteTask
 from functions.updateTask import updateTask
-from functions.inputDate import getDate
+from functions.userInput import getDate
+from functions.userInput import getTaskName
 from functions.status import updateStatus
 file_path = "db.json"
 console  = Console()
@@ -27,8 +28,7 @@ while True:
     if(userInput == "1"):
         unique_number = uuid.uuid4()
         taskid = str(unique_number)
-        taskName = input("Enter a Task Name : ")
-        print(f"Your task is {taskName}")
+        taskName = getTaskName()
         taskDetails = input("Enter a Task Details : ")
         print(f"Your task description is {taskName}")
         dueDate = getDate()
