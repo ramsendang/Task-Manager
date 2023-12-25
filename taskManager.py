@@ -7,6 +7,8 @@ from functions.deleteTask import deleteTask
 from functions.updateTask import updateTask
 from functions.userInput import getDate
 from functions.userInput import getTaskName
+from functions.userInput import getTaskDetails
+from functions.userInput import getStatus
 from functions.status import updateStatus
 file_path = "db.json"
 console  = Console()
@@ -29,13 +31,10 @@ while True:
         unique_number = uuid.uuid4()
         taskid = str(unique_number)
         taskName = getTaskName()
-        taskDetails = input("Enter a Task Details : ")
-        print(f"Your task description is {taskName}")
+        taskDetails = getTaskDetails()
         dueDate = getDate()
         dueDate = str(dueDate)
-        print(f"Your Task due date is {dueDate}")
-        status = input("Enter the status of the task (e.g. Done, In Progeress, Not Started)")
-        print(f"Your Task's status is {status}")
+        status = getStatus()
         task = {
             "task" : taskName,
             "details": taskDetails,
@@ -46,7 +45,6 @@ while True:
             taskid : task
         }
         insertJson(tasks, file_path)
-        print(f"Task added Successfully")
     elif(userInput == "2"):
         print(f"Your Tasks are as follows")
         viewTable = Table(title ="Tast List View")

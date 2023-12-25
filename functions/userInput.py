@@ -7,6 +7,7 @@ def getDate():
 
         try:
             dueDate = datetime.strptime(user_input, date_format).date()
+            print(f"Your Task due date is {dueDate}")
             return dueDate
         except ValueError:
             print(f"Invalid date format. Please enter a date in the format {date_format}.")
@@ -19,3 +20,12 @@ def getTaskName():
             return taskName
         else:
             print(f"The Task Name should not be Empty")
+
+def getTaskDetails():
+    taskDetails = input("Enter a Task Details : ")
+    print(f"Your task description is {taskDetails}")
+    return taskDetails
+
+def getStatus():
+    status = input("Enter the status of the task (e.g. Done, In Progeress, Not Started)")
+    print(f"Your Task's status is {status}")

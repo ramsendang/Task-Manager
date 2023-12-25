@@ -9,6 +9,7 @@ def insertJson(data, file_path):
     jsondata.update(data)
     try:
         with open(file_path, "w") as json_file:
+            print(f"Task added Successfully")
             json.dump(jsondata, json_file, indent=2)
     except:
         print("Task not added successfully")
