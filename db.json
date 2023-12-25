@@ -15,6 +15,12 @@
     "task": "Read",
     "details": "Read about 1 hour a day",
     "due date": "2022-01-02",
-    "status": null
+    "status": "Not Started"
+  },
+  "64ce6887-556b-4a1c-9d2d-9a14553893df": {
+    "task": "hi",
+    "details": "ram",
+    "due date": "2022-12-02",
+    "status": "Done"
   }
 }
