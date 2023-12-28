@@ -3,7 +3,7 @@ from rich.table import Table
 import uuid
 from functions.deleteTask import deleteTask
 from functions.readjson import readJson
-from functions.userInput import getDate
+from functions.userInput import getDate 
 from functions.userInput import getTaskName
 from functions.userInput import getTaskDetails
 from functions.userInput import getStatus
@@ -12,6 +12,7 @@ from functions.updateTask import updateTask
 from functions.status import updateStatus
 console = Console()
 def creatTask(file_path):
+    console.print("Your have selected oution 1 (Add a Task). Please Enter the requested information to add a task ")
     unique_number = uuid.uuid4()
     taskid = str(unique_number)
     taskName = getTaskName()

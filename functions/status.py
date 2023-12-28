@@ -1,7 +1,7 @@
 import json
 
 def updateStatus(json_file_path, task_to_update, newStatus):
-    # Read JSON data from the file
+    # Read JSON data from the json file file
     with open(json_file_path, 'r') as json_file:
         json_data = json.load(json_file)
 
