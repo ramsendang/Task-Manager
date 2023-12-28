@@ -27,6 +27,7 @@ while True:
         # calling a function to update the status of the task 
         updateTaskStatus(file_path)
     elif(userInput=="6"):
+        console.print("You have selcted the option 6 (Quit). Console Closed.")
         break
     else:
         console.print("[bold magenta]Invalid Options[/bold magenta] ") 

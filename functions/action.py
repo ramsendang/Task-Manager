@@ -32,6 +32,7 @@ def creatTask(file_path):
     insertJson(tasks, file_path)
 
 def printTask(file_path):
+    console.print("Your have selected oution 2 (View all the Task). ")
     print(f"Your Tasks are as follows")
     viewTable = Table(title ="Tast List View")
     viewTable.add_column("Task", style="cyan", justify="center")
@@ -56,6 +57,7 @@ def deleteTasks(file_path):
     console.print("[bold magenta]Task Deleted Successfully : [/bold magenta] ")
 
 def updateTasks(file_path):
+    console.print("Your have selected oution 4 (Update a task). Please Enter the requested information to update a task ")
     jsonFile = readJson(file_path)
     updateTable = Table(title="Tasks for Update")
     updateTable.add_column("Tasks", style="cyan")
@@ -68,6 +70,7 @@ def updateTasks(file_path):
     console.print("[bold magenta]Task Updated Successfully : [/bold magenta] ")
 
 def updateTaskStatus(file_path):
+    console.print("[bold magenta]Your have selected oution 5 (Update status). Please Enter the requested information to update status [/bold magenta]")
     jsonFile = readJson(file_path)
     updateTable = Table(title="Tasks for Update")
     updateTable.add_column("Tasks", style="cyan")

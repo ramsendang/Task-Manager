@@ -1,7 +1,7 @@
 import json
 
 def deleteTask(json_file_path, target_value):
-    # Read JSON data from the file
+    # Read JSON data from the json file path 
     with open(json_file_path, 'r') as json_file:
         json_data = json.load(json_file)
 
