@@ -13,7 +13,3 @@ def createOptions():
     table.add_row("5", "Update Status")
     table.add_row("6", "Quit")
     console.print(table)
-
-    userInput = input("Enter a choice : ")
-    userInput = userInput.strip()
-    return userInput

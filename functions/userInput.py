@@ -30,3 +30,4 @@ def getTaskDetails():
 def getStatus():
     status = input("Enter the status of the task (e.g. Done, In Progeress, Not Started)")
     print(f"Your Task's status is {status}")
+    return status
